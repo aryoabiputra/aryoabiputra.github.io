@@ -1,239 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aryo's Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Under Development</title>
+  <style>
+    * { box-sizing: border-box; }
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(800px circle at 20% 20%, #2b2f3a, #0b0d12 60%);
+      color:#e9eefc;
+      padding:24px;
+    }
+    .card{
+      width:min(680px, 100%);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 28px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      text-align:center;
+    }
+    .badge{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:8px 12px;
+      border-radius:999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: 13px;
+      letter-spacing: .2px;
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background:#ffd166;
+      box-shadow: 0 0 0 6px rgba(255,209,102,0.15);
+      animation: pulse 1.2s infinite;
+    }
+    @keyframes pulse{
+      0% { transform: scale(1); opacity: 1; }
+      70%{ transform: scale(1.25); opacity: .6; }
+      100%{ transform: scale(1); opacity: 1; }
+    }
+    h1{
+      margin: 0 0 10px;
+      font-size: clamp(24px, 3.2vw, 34px);
+      line-height: 1.2;
+    }
+    p{
+      margin: 0;
+      opacity: .85;
+      font-size: 15.5px;
+      line-height: 1.6;
+    }
+    .msg{
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(0,0,0,0.25);
+      border: 1px solid rgba(255,255,255,0.10);
+      font-weight: 600;
+    }
+    .footer{
+      margin-top: 18px;
+      font-size: 12.5px;
+      opacity: .6;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="badge"><span class="dot"></span> Portfolio Page</div>
+    <h1>Under Development</h1>
+    <p>Thanks for stopping by — I’m currently building this page.</p>
 
-    <!-- Bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
+    <div class="msg">This website is currently under development</div>
 
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <div class="footer">© <span id="y"></span></div>
+  </main>
 
-    <script src="script.js" defer></script>
-  </head>
-
-  <body>
-    <!-- header---------------------------------------------------------------------------------------------------------- -->
-    <header>
-      <div class="container">
-        <div class="logo">ARYO</div>
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li>
-              <button id="dark-mode-toggle" aria-label="Toggle dark mode">
-                <i class="fas fa-moon"></i>
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <!-- home---------------------------------------------------------------------------------------------------------------- -->
-    <section id="home" class="home-section fade-in">
-      <div class="container home-content">
-        <!-- teks home -->
-        <div class="home-text">
-          <h1>Hi, I'm Aryo</h1>
-          <p>Informatics Engineering Student at University of Riau</p>
-          <a href="#about" class="btn">About Me</a>
-        </div>
-        <!-- end teks home -->
-        <!-- gambar home -->
-        <div class="home-image">
-          <img src="img/laptop.png" alt="ilustrasi" />
-        </div>
-        <!-- end gambar home -->
-      </div>
-    </section>
-
-    <!-- about-------------------------------------------------------------------------------------------------------------------------------------- -->
-    <section id="about" class="about-section fade-in">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-          <!-- teks penjelasan diri -->
-          <div class="about-me">
-            <!-- <h3>About</h3> -->
-            <div class="about-image-container">
-              <img src="img/laptop.png" alt="foto aryo" />
-              <p>
-                I am a passionate Informatics Engineering student at Universitas
-                Riau with a strong interest in web development, software
-                engineering, and data science. I enjoy solving complex problems
-                and creating innovative solutions through technology. 
-                <br>
-                <br>
-                My skills include HTML, CSS, JavaScript, Python, and Java. I'm
-                constantly learning new technologies to expand my knowledge and
-                improve my abilities.
-              </p>
-              <!-- <p>
-                My skills include HTML, CSS, JavaScript, Python, and Java. I'm
-                constantly learning new technologies to expand my knowledge and
-                improve my abilities.
-              </p> -->
-            </div>
-          </div>
-          <!-- end teks penjelasan diri -->
-
-          <!-- Tombol Kategori -->
-          <div class="about-category-button">
-            <div class="about-button" data-category="all">
-              <i class="fas fa-th-large"></i> All
-            </div>
-            <div class="about-button" data-category="formal">
-              <i class="fas fa-graduation-cap"></i> Formal Education
-            </div>
-            <div class="about-button" data-category="course">
-              <i class="fas fa-chalkboard-teacher"></i> Course & Bootcamp
-            </div>
-            <div class="about-button" data-category="certificate">
-              <i class="bi bi-trophy-fill"></i> Certificate & Archivment
-            </div>
-          </div>
-
-          <!-- card kategori-->
-          <div class="about-container">
-            <div class="card fade-in" data-category="formal">
-              <h4>Dicoding Academy</h4>
-              <p class="degree">Front End Web Developer</p>
-              <p class="year">September 2024 - Desember 2024</p>
-            </div>
-            <div class="card fade-in" data-category="formal">
-              <h4>Progate</h4>
-              <p class="degree">Frontend Basics</p>
-              <p class="year">Jan 2024</p>
-            </div>
-            <div class="card fade-in" data-category="course">
-              <h4>Coursera</h4>
-              <p class="degree">JavaScript Essentials</p>
-              <p class="year">Mar 2024</p>
-            </div>
-            <div class="card fade-in" data-category="course">
-              <h4>Coursera</h4>
-              <p class="degree">JavaScript Essentials</p>
-              <p class="year">Mar 2024</p>
-            </div>
-            <div class="card fade-in" data-category="certificate">
-              <h4>Coursera</h4>
-              <p class="degree">JavaScript Essentials</p>
-              <p class="year">Mar 2024</p>
-            </div>
-            <div class="card fade-in" data-category="certificate">
-              <h4>Coursera</h4>
-              <p class="degree">JavaScript Essentials</p>
-              <p class="year">Mar 2024</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projek ----------------------------------------------------------------------------------------------------------->
-    <section id="projects" class="projects-section fade-in">
-      <div class="container">
-        <h2 class="section-title">My Projects</h2>
-        <!-- Tombol Kategori Project -->
-        <div class="project-category-button">
-          <div class="project-button active" data-category="all">All</div>
-          <div class="project-button" data-category="web">Web & App</div>
-          <div class="project-button" data-category="games">Game</div>
-          <div class="project-button" data-category="iot">IOT</div>
-        </div>
-        <div class="projects-grid">
-          <!-- project card 1 -->
-          <div class="project-card fade-in" data-category="web">
-            <h3>Calculator</h3>
-            <p>
-              A simple yet aesthetic calculator developed using HTML, CSS, and JavaScript.
-            </p>
-          </div>
-          <!-- project card 2 -->
-          <div class="project-card fade-in" data-category="game">
-            <h3>Anomalia</h3>
-            <p>The anomali-themed game 'Branroot' that I created to complete a multimedia systems course project.</p>
-          </div>
-          <!-- project card 3 -->
-          <div class="project-card fade-in" data-category="iot">
-            <h3>Binary To Hexadecimal Conversion</h3>
-            <p>A simple device that converts binary numbers to hexadecimal using Arduino and a 7-segment LED display.</p>
-          </div>
-          <!-- project card 4 -->
-          <div class="project-card fade-in" data-category="web">
-            <h3>Portfolio Website</h3>
-            <p>Personal portfolio website built with HTML, CSS, and JavaScript.</p>
-          </div>
-          <!-- project card 5 -->
-          <div class="project-card fade-in" data-category="iot">
-            <h3>Project ONE</h3>
-            <p>An RC car that can be controlled from a mobile phone.</p>
-          </div>
-          <!-- project card 6 -->
-          <div class="project-card fade-in" data-category="games">
-            <h3>Guess the Fruit</h3>
-            <p>a game developed in C# where players must guess the name of a fruit based on the given clues.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--contact------------------------------------------------------------------------------------------------------------>
-    <section id="contact" class="contact-section fade-in">
-      <div class="container">
-        <h2 class="section-title">Contact Me</h2>
-        <div class="contact-content">
-          <!-- form kontak -->
-          <form class="contact-form">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-          </form>
-          <!-- end form kontak -->
-          <!-- info kontak -->
-          <div class="contact-info">
-            <p><i class="fas fa-envelope"></i> aryoputra606@gmail.com</p>
-            <p><i class="fas fa-phone"></i> +62 821 7447 7846</p>
-            <p>
-              <i class="fas fa-map-marker-alt"></i> Pekanbaru, Riau, Indonesia
-            </p>
-            <div class="social-links">
-              <a href="https://github.com/aryoabi" class="social-icon"
-                ><i class="fab fa-github"></i><span>GitHub</span></a
-              >
-              <a href="https://www.instagram.com/aryoabiputra/" class="social-icon"
-                ><i class="fab fa-instagram"></i><span>Instagram</span></a
-              >
-              <a href="#" class="social-icon"
-                ><i class="fab fa-tiktok"></i><span>TikTok</span></a
-              >
-            </div>
-          </div>
-          <!-- end info kontak -->
-        </div>
-      </div>
-    </section>
-
-    <!-- footer------------------------------------------------------------------------------------------------ -->
-    <footer>
-      <div class="container">
-        <p>&copy; 2025 Aryo's Portfolio. All rights reserved.</p>
-      </div>
-    </footer>
-  </body>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
-
